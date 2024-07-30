@@ -24,6 +24,7 @@ int main()
         ll numdigit=0;
         ll digitlength=0;
         ll prevdigit=0;
+      // it will be finding the range of the that number where it should lie .
         for(ll i=1;i<19;i++){
             digitlength+=(powers[i]-powers[i-1])*i;
             if(digitlength>=n){
@@ -32,6 +33,7 @@ int main()
             }
             prevdigit=digitlength;
         }
+      // now u get the range and u know how much digits they take -->so starting position will be :(mid-powers[numdigit-1])*numdigit+prevdigit+1;
         ll low=powers[numdigit-1];
         ll high=powers[numdigit]-1;
         ll ans=0;
@@ -50,6 +52,7 @@ int main()
                 high=mid-1;
             }
         }
+      //after getting position we will give ans.
         string number=to_string(ans);
         cout<<number[n-startposAns]<<endl;
     }
