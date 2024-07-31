@@ -38,6 +38,8 @@ int main()
         ll high=powers[numdigit]-1;
         ll ans=0;
         ll startposAns=0;
+      // low high is showing number and we are finding the number and then through startpos we re finding his position and then we coompare with n ,is this position lie 
+      // equals tto n ,then we get the position with element and we get the digits by subtracting n-startAnsPos.
         while(low<=high){
             ll mid=(high+low)/2;
             ll startpos=(mid-powers[numdigit-1])*numdigit+prevdigit+1;
